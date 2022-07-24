@@ -1,0 +1,13 @@
+.button{
+    margin-bottom: 10px;
+    padding: 10px 25px;
+
+    background-color: var(--txt-nonactive-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.button:active {
+    background-color: var(--txt-active-color);
+  }

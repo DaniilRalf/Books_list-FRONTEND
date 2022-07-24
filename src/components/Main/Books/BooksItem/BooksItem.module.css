@@ -1,0 +1,31 @@
+.books_item{
+    margin-bottom: 10px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(auto, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+
+.contain{
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    border: 1px solid var(--txt-active-color);
+    border-radius: var(--border-radius);
+}
+
+.img{
+    width: 170px;
+    height: 200px;
+    margin-bottom: 10px;
+
+    border-radius: var(--border-radius);
+    background-color: #5f6e87;
+}

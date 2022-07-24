@@ -1,0 +1,11 @@
+.authors_item{
+
+}
+
+
+
+.contain{
+    padding: var(--main-paddind);
+    border-bottom: 1px solid var(--txt-nonactive-color);
+    border-radius: var(--border-radius);
+}
