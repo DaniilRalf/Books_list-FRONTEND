@@ -2,6 +2,8 @@ import style from './AddAuthor.css';
 import {useState} from "react";
 import {useDispatch} from "react-redux";
 import {createAuthor} from "../../../../store/features/AuthorsSlise";
+import Button from "../../../UI/Button/Button";
+import Input from "../../../UI/Input/Input";
 
 
 
@@ -26,19 +28,23 @@ const AddAuthor = () => {
 
 
     return (
-        <div className={style.add_author}>
-            <p className={style.input_description}></p>
-            <div className={style.input_form}>
+        <div className='container'>
+            <div className={style.add_author}>
+                <p className={style.input_description}>At the moment it is possible to add an author with only the name, additional information can be added later..</p>
+                <div className={style.input_form}>
 
-                <div className={style.form_name}>
-                    <p>Enter the Author name</p>
-                    <input type='text'
-                           value={inputName}
-                           onChange={(e) => changeInpputName(e.target.value)}
-                    />
-                    <button onClick={e => onSaveAuthor()}>Save author</button>
+                    <div className={style.form_name}>
+                            <Input type='text'
+                                    placeholder={'Enter name'}
+                                    value={inputName}
+                                    onChange={(e) => changeInpputName(e.target.value)}
+                            />
+                            <Button onClick={e => onSaveAuthor()}>
+                                Save author
+                            </Button>
+                    </div>
+
                 </div>
-
             </div>
         </div>
     );

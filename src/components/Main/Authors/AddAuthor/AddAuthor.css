@@ -1,16 +1,12 @@
-.add_author{
-
-}
-
-
-.input_description{
-
-}
-.input_form{
-
-}
-
+.add_author{}
+.input_description{}
+.input_form{}
 
 .form_name{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+}
+.form_name_item{
+    margin-bottom: 10px !important;
 }

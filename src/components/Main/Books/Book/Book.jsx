@@ -20,15 +20,24 @@ const Book = () => {
     let myBook = book.filter(i => {
         return i.id == id;
     })
+
     let construct = myBook.map(i => {
+        let authorsConstruct = i.authors.map(author => {
+            return (
+                <p key={author.name}>{author.name}</p>
+            )
+        })
         return(
             <div key={i.id} className={style.contain}>
+                <div className={style.img}></div>
                 <p>ID: {i.id}</p>
                 <p>Titie: {i.title}</p>
+                <p>Authors:</p>{authorsConstruct}
                 <p>Description: {i.description}</p>
             </div>
         )
     })
+    console.log(construct)
     // GET BOOK----------------------------------------------
     
 

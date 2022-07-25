@@ -1,6 +1,6 @@
 import style from './Books.module.css'
 import BooksItem from "./BooksItem/BooksItem";
-import Button from '../../UI/Button';
+import Button from '../../UI/Button/Button';
 
 const Books = () => {
 

@@ -1,6 +1,6 @@
 import style from './Authors.module.css'
 import AuthorsItem from "./AuthorsItem/AuthorsItem";
-import Button from '../../UI/Button';
+import Button from '../../UI/Button/Button';
 import {NavLink} from "react-router-dom";
 
 const Authors = () => {
