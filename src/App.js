@@ -7,6 +7,8 @@ import Header from "./components/Header/Header";
 import Books from "./components/Main/Books/Books";
 import Authors from "./components/Main/Authors/Authors";
 import Book from "./components/Main/Books/Book/Book";
+import AddBook from "./components/Main/Books/AddBook/AddBook";
+import AddAuthor from "./components/Main/Authors/AddAuthor/AddAuthor";
 // IMPORTS-----------------------------------------
 
 function App() {
@@ -27,9 +29,13 @@ function App() {
         <Header></Header>
         <Routes>
             <Route path="/books" element={<Books />}></Route>
-            <Route path="/books/:id" element={<Book />}></Route>
             <Route path="/authors" element={<Authors />}></Route>
+
+            <Route path="/books/:id" element={<Book />}></Route>
             {/* <Route path="/authors/:id" element={}></Route> */}
+
+            <Route path="/books/add_book" element={<AddBook />}></Route>
+            <Route path="/authors/add_author" element={<AddAuthor />}></Route>
         </Routes>
     </div>
   );

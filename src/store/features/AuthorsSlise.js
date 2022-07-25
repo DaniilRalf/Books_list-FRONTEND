@@ -16,6 +16,20 @@ export const getAuthors = createAsyncThunk(
 // GET ALL---------------------------------------------
 
 
+// CREATE ONE AUTHOR-------------------------------------
+export  const createAuthor = createAsyncThunk(
+    'books/createAuthor',
+    async function(name){
+        let body = {
+            name: name
+        };
+        const response = await axios.post(`${URL_AUTHORS}create`, body);
+        return response.data;
+    }
+)
+// CREATE ONE AUTHOR-------------------------------------
+
+
 // // GET ONE---------------------------------------------
 // export const getById = createAsyncThunk(
 //     'books/getById',
