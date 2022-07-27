@@ -14,12 +14,14 @@ const BooksItem = () => {
         dispatch(getBooks());
     }, []);
 
-    const books = useSelector(state => state.books.books)
+    const books = useSelector(state => state.books.books);
+    // console.log(books)
+
     let construct = books.map(i => {
         return (
             <div key={i.id} className={style.contain}>
                 <NavLink to={`/books/${i.id}`}>
-                    <div className={style.img}></div>
+                    <img className={style.img} src={`http://localhost:4000/${i.img}`} />
                 </NavLink>
                 <p className={style.title}>{i.title}</p>
             </div>

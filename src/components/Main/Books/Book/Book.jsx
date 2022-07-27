@@ -29,7 +29,7 @@ const Book = () => {
         })
         return(
             <div key={i.id} className={style.contain}>
-                <div className={style.img}></div>
+                <div className={style.img}><img src={`http://localhost:4000/${i.img}`} /></div>
                 <p>ID: {i.id}</p>
                 <p>Titie: {i.title}</p>
                 <p>Authors:</p>{authorsConstruct}

@@ -1,6 +1,7 @@
 import style from './Books.module.css'
 import BooksItem from "./BooksItem/BooksItem";
 import Button from '../../UI/Button/Button';
+import {NavLink} from "react-router-dom";
 
 const Books = () => {
 
@@ -11,7 +12,7 @@ const Books = () => {
     return (
         <div className="container">
             <div className={style.books}>
-                <Button onClick={test}>Add book</Button>
+                <NavLink to={'/books/add_book'}><Button>Add book</Button></NavLink>
                 <BooksItem></BooksItem>
             </div>
         </div>

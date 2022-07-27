@@ -10,20 +10,20 @@ import Input from "../../../UI/Input/Input";
 const AddAuthor = () => {
 
     // STATE INPUT----------------------------------------
-    const [inputName, setInputName] = useState( '');
-    let changeInpputName = (value) => {
-        setInputName(value);
-    }
+        const [inputName, setInputName] = useState( '');
+        let changeInpputName = (value) => {
+            setInputName(value);
+        }
     // STATE INPUT----------------------------------------
 
 
     // POST INPUT DATA------------------------------------
-    const dispatch = useDispatch();
+        const dispatch = useDispatch();
 
-    let onSaveAuthor = () => {
-        dispatch(createAuthor(inputName));
-        setInputName('');
-    }
+        let onSaveAuthor = () => {
+            dispatch(createAuthor(inputName));
+            setInputName('');
+        }
     // POST INPUT DATA------------------------------------
 
 

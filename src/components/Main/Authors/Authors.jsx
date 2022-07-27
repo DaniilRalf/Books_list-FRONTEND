@@ -5,14 +5,10 @@ import {NavLink} from "react-router-dom";
 
 const Authors = () => {
 
-    let test = () => {
-        console.log('test');
-    }
-
     return (
         <div className="container">
             <div className={style.authors}>
-                <NavLink to={'/authors/add_author'}><Button onClick={test}>Add author</Button></NavLink>
+                <NavLink to={'/authors/add_author'}><Button>Add author</Button></NavLink>
                 <AuthorsItem></AuthorsItem>
             </div>
         </div>

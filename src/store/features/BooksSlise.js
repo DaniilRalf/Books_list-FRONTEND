@@ -5,6 +5,25 @@ import axios from "axios";
 let URL_BOOKS = 'http://localhost:4000/api/books/';
 
 
+// CREATE ONE BOOK-------------------------------------
+export  const createBook = createAsyncThunk(
+    'books/createBook',
+    async function(data){
+        // let body = {
+        //     name: name
+        // };
+        let config = {
+            header: {'content-type': 'multypart/form-data'}
+        }
+        const response = await axios.post(`${URL_BOOKS}create`, data, config);
+        console.log(response)
+        console.log(response.data)
+        return response.data;
+    }
+)
+// CREATE ONE BOOK-------------------------------------
+
+
 // GET ALL---------------------------------------------
 export const getBooks = createAsyncThunk(
     'books/getBooks',
