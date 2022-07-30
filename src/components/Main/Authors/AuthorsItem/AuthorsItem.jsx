@@ -3,7 +3,7 @@ import {useEffect} from "react";
 import {useDispatch} from "react-redux";
 import {useSelector} from "react-redux";
 import {getAuthors} from "../../../../store/features/AuthorsSlise";
-// import {NavLink} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 const AuthorsItem = () => {
 
@@ -18,10 +18,12 @@ const AuthorsItem = () => {
     let construct = authors.map(i => {
         return (
             <div key={i.id} className={style.contain}>
-                {/* <NavLink to={`/authors/${i.id}`}>
-                    <div className={style.img}></div>
-                </NavLink> */}
-                <p className={style.title}>{i.name}</p>
+                <NavLink to={`/authors/${i.id}`}>
+                    <div className={style.body}>
+                        <div className={style.img}></div>
+                        <p className={style.title}>{i.name}</p>
+                    </div>
+                </NavLink>
             </div>
         )
     })

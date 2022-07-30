@@ -7,7 +7,7 @@ let URL_AUTHORS = 'http://localhost:4000/api/authors/';
 
 // GET ALL---------------------------------------------
 export const getAuthors = createAsyncThunk(
-    'books/getAuthors',
+    'authors/getAuthors',
     async function(){
         const response = await axios.get(`${URL_AUTHORS}get_all`);
         return response.data;
@@ -16,9 +16,23 @@ export const getAuthors = createAsyncThunk(
 // GET ALL---------------------------------------------
 
 
+// GET ONE---------------------------------------------
+export const getById = createAsyncThunk(
+    'authors/getById',
+    async function(id){
+        let body = {
+            id: id
+        };
+        const response = await axios.post(`${URL_AUTHORS}get_by_id`, body);
+        return response.data;
+    }
+)
+// GET ONE---------------------------------------------
+
+
 // CREATE ONE AUTHOR-------------------------------------
 export  const createAuthor = createAsyncThunk(
-    'books/createAuthor',
+    'authors/createAuthor',
     async function(name){
         let body = {
             name: name
@@ -30,26 +44,12 @@ export  const createAuthor = createAsyncThunk(
 // CREATE ONE AUTHOR-------------------------------------
 
 
-// // GET ONE---------------------------------------------
-// export const getById = createAsyncThunk(
-//     'books/getById',
-//     async function(id){
-//         let body = {
-//             id: id
-//         };
-//         const response = await axios.post(`${URL_AUTHORS}get_by_id`, body);
-//         return response.data;
-//     }
-// )
-// // GET ONE---------------------------------------------
-
-
 
 const Authors_Slice = createSlice({
     name: 'authors',
     initialState: {
         authors: [],
-        // book: [],
+        author: [],
     },
     extraReducers: {
         [getAuthors.fulfilled]: (state, action) => {
@@ -57,10 +57,10 @@ const Authors_Slice = createSlice({
             console.log(action.payload)
         },
 
-        // [getById.fulfilled]: (state, action) => {
-        //     state.book = [action.payload]
-        //     console.log(action.payload)
-        // },
+        [getById.fulfilled]: (state, action) => {
+            state.author = [action.payload]
+            console.log(action.payload)
+        },
 
     },
 })
