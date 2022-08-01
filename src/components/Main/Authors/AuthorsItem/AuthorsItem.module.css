@@ -9,3 +9,18 @@
     border-bottom: 1px solid var(--txt-nonactive-color);
     border-radius: var(--border-radius);
 }
+
+.body{
+    display: flex;
+}
+
+.title{
+  
+}
+
+.img{
+    border-radius: 50%;
+    background-color: var(--txt-nonactive-color);
+    height: 100px;
+    width: 100px;
+}
